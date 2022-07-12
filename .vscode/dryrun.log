@@ -2,9 +2,7 @@ make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/osama/project'
  
 mkdir -p /home/osama/project/bin
- 
 GOBIN=/home/osama/project/bin go install sigs.k8s.io/controller-tools/cmd/controller-gen@v0.8.0
- 
 /home/osama/project/bin/controller-gen object:headerFile="hack/boilerplate.go.txt" paths="./..."
 go fmt ./...
 go vet ./...

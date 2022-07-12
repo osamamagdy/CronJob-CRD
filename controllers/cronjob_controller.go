@@ -264,7 +264,7 @@ func (r *CronJobReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ct
 	// Start calculating appropriate times from our last run, or the creation of the CronJob if we can't find the last run.
 	// Otherwise, return the latest missed run and the next run to reconcile it again
 	getNextSchedule := func(cronJob *batchv1.CronJob, now time.Time) (lastMissed time.Time, next time.Time, err error) {
-		sched, err := cron.Parsestandard(cronJob.Spec.Schedule)
+		sched, err := cron.ParseStandard(cronJob.Spec.Schedule)
 		if err != nil {
 			return time.Time{}, time.Time{}, fmt.Errorf("Unparseable schedule %q: %v", cronJob.Spec.Schedule, err)
 		}
