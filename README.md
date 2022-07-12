@@ -1,7 +1,6 @@
 # project
 Building my first Custom Resource definition (CRD) in kubernetes. It is a CronJob that runs natively inside the cluster with separate controller for reconciliation logic. Following the tutorial in [kubebuilder book](https://book.kubebuilder.io/cronjob-tutorial/cronjob-tutorial.html)
 
-
 ## Getting Started
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
 **Note:** Your controller will automatically use the current context in your kubeconfig file (i.e. whatever cluster `kubectl cluster-info` shows).
